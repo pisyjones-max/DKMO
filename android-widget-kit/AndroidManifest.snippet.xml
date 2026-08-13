@@ -1,0 +1,32 @@
+<!--
+  Вставить ВНУТРЬ тега <application> в android/app/src/main/AndroidManifest.xml
+  (например, сразу после блока <activity>). Ничего другого в манифесте
+  менять не нужно.
+-->
+
+<receiver
+    android:name=".DkmoWidgetProvider"
+    android:exported="false"
+    android:label="@string/dkmo_widget_label">
+    <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+        <action android:name="com.dkmo.app.MIDNIGHT_REFRESH" />
+    </intent-filter>
+    <meta-data
+        android:name="android.appwidget.provider"
+        android:resource="@xml/dkmo_widget_info" />
+</receiver>
+
+<!--
+  Разрешение для точного будильника на полночь (чтобы число на виджете
+  менялось ровно в момент смены дня). Вставить РЯДОМ с другими
+  <uses-permission ...> тегами, вне <application> — обычно они идут
+  прямо перед <application> в начале файла.
+
+  Это необязательное разрешение: если его не добавить или пользователь
+  не даст доступ, код в DkmoWidgetProvider.kt аккуратно откатится на
+  обычное (неточное) плановое обновление раз в ~30 минут — виджет всё
+  равно будет работать, просто число может обновиться на пару минут позже
+  полуночи, а не секунда в секунду.
+-->
+<!-- <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" /> -->

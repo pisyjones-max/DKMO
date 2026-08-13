@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/dkmo_widget_background"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/widget_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#F5F5F0"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/widget_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="дней до конца молодости"
+        android:textColor="#C8FF00"
+        android:textSize="11sp"
+        android:textAllCaps="true"
+        android:letterSpacing="0.05"
+        android:gravity="center"
+        android:maxLines="2" />
+
+</LinearLayout>

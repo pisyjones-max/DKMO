@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dkmo_widget_label">ДКМО — дни до конца молодости</string>
+    <string name="dkmo_widget_description">Показывает, сколько дней осталось до выбранного возраста.</string>
+</resources>
